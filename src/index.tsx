@@ -1,4 +1,5 @@
 import { NativeModules, Platform } from 'react-native';
+import type { ESettings } from './types';
 
 const LINKING_ERROR =
   `The package 'react-native-open-settings' doesn't seem to be linked. Make sure: \n\n` +
@@ -17,6 +18,12 @@ const OpenSettings = NativeModules.OpenSettings
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return OpenSettings.multiply(a, b);
+export function openSettings(value: ESettings): void {
+  return OpenSettings?.openSettings(value);
 }
+
+export function locationSettings(): void {
+  return OpenSettings?.locationSettings();
+}
+
+export { ESettings } from './types';
