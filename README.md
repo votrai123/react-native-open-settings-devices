@@ -1,4 +1,4 @@
-# react-native-open-settings
+# react-native-open-settings-devices
 
 
 The library is used to open settings for platform Android and IOS, and it uses for React Native
@@ -63,6 +63,10 @@ const openLocationSettins = async () => {
 ***IOS***
 
 ![Example for ios](images/ios.gif)
+
+## Related
+
+For IOS: https://gist.github.com/deanlyoung/368e274945a6929e0ea77c4eca345560
 
 
 ## Contributing
