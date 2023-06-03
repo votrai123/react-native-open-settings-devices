@@ -18,12 +18,31 @@ const OpenSettings = NativeModules.OpenSettings
       }
     );
 
+/**
+ * @description function to open settings for platform android and ios
+ * @param {value} value enum ESettings
+ */
 export function openSettings(value: ESettings): void {
   return OpenSettings?.openSettings(value);
 }
 
+/**
+ * @description working only Platform Android
+ */
 export function locationSettings(): void {
-  return OpenSettings?.locationSettings();
+  return OpenSettings?.openSettingsGPS();
+}
+
+/**
+ * @description working only Platfrom IOS
+ */
+export async function checkAllowLocationServices(): Promise<boolean> {
+  try {
+    const checked = await OpenSettings?.checkAllowLocationServices();
+    return checked;
+  } catch {
+    return false;
+  }
 }
 
 export { ESettings } from './types';

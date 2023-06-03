@@ -6,14 +6,23 @@ import {
   Text,
   TouchableOpacity,
   FlatList,
+  Platform,
 } from 'react-native';
 import {
   openSettings,
   locationSettings,
   ESettings,
+  checkAllowLocationServices,
 } from 'react-native-open-settings';
 
 export default function App() {
+  const [allow, setAllow] = React.useState<boolean>(false);
+  React.useEffect(() => {
+    (async () => {
+      const result = await checkAllowLocationServices();
+      setAllow(result);
+    })();
+  }, []);
   return (
     <View style={styles.container}>
       <FlatList
@@ -29,13 +38,30 @@ export default function App() {
           </TouchableOpacity>
         )}
       />
-      <TouchableOpacity
-        activeOpacity={0.7}
-        onPress={() => locationSettings()}
-        style={styles.button}
-      >
-        <Text style={styles.content}>Open location setting</Text>
-      </TouchableOpacity>
+      {Platform.OS === 'android' && (
+        <TouchableOpacity
+          activeOpacity={0.7}
+          onPress={() => locationSettings()}
+          style={styles.button}
+        >
+          <Text style={styles.content}>Open location setting</Text>
+        </TouchableOpacity>
+      )}
+      {Platform.OS === 'ios' && (
+        <TouchableOpacity
+          activeOpacity={0.7}
+          onPress={async () => {
+            const result = await checkAllowLocationServices();
+            setAllow(result);
+          }}
+          style={styles.button}
+        >
+          <Text style={styles.content}>
+            Check allow Location services. current status{' '}
+            {allow ? 'allow' : 'is Not allow'}
+          </Text>
+        </TouchableOpacity>
+      )}
     </View>
   );
 }
