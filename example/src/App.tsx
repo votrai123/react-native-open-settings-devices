@@ -13,7 +13,7 @@ import {
   locationSettings,
   ESettings,
   checkAllowLocationServices,
-} from 'react-native-open-settings';
+} from 'react-native-open-settings-devices';
 
 export default function App() {
   const [allow, setAllow] = React.useState<boolean>(false);

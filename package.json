@@ -1,6 +1,6 @@
 {
-  "name": "react-native-open-settings",
-  "version": "0.1.0",
+  "name": "react-native-open-settings-devices",
+  "version": "1.0.0",
   "description": "test",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -41,13 +41,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/votrai123/react-native-open-settings",
+  "repository": "https://github.com/votrai123/react-native-open-settings-devices",
   "author": "Trai Nguyen <trainguyen1199@gmail.com> (https://github.com/votrai123)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/votrai123/react-native-open-settings/issues"
+    "url": "https://github.com/votrai123/react-native-open-settings-devices/issues"
   },
-  "homepage": "https://github.com/votrai123/react-native-open-settings#readme",
+  "homepage": "https://github.com/votrai123/react-native-open-settings-devices#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

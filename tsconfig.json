@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react-native-open-settings": ["./src/index"]
+      "react-native-open-settings-devices": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
