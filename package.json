@@ -1,6 +1,6 @@
 {
   "name": "react-native-open-settings-devices",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The library is used to open settings for platform Android and IOS, and it uses for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -42,6 +42,7 @@
     "android"
   ],
   "repository": "https://github.com/votrai123/react-native-open-settings-devices",
+  "email": "trainguyen1199@gmail.com",
   "author": "Trai Nguyen <trainguyen1199@gmail.com> (https://github.com/votrai123)",
   "license": "MIT",
   "bugs": {
