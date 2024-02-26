@@ -1,7 +1,7 @@
 {
   "name": "react-native-open-settings-devices",
   "version": "1.0.1",
-  "description": "test",
+  "description": "The library is used to open settings for platform Android and IOS, and it uses for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
